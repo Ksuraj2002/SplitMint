@@ -1,0 +1,305 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.breadcrumb {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb a {
+  color: var(--accent);
+}
+
+.breadcrumbSep {
+  margin: 0 0.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.loading {
+  color: var(--text-muted);
+}
+
+.error {
+  padding: 0.75rem;
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--red);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardLabel {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.cardValue {
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btnPrimary {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btnPrimary:hover {
+  background: var(--accent-hover);
+}
+
+.btnSecondary {
+  padding: 0.5rem 1rem;
+  background: var(--surface-hover);
+  color: var(--text-muted);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.btnIcon {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.btnIcon:hover {
+  color: var(--accent);
+}
+
+.btnDanger {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--red);
+}
+
+.btnDanger:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.positive {
+  color: var(--green);
+  font-family: var(--font-mono);
+}
+
+.negative {
+  color: var(--red);
+  font-family: var(--font-mono);
+}
+
+.settlements {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.settlementsTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.settlementsList {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.settlementsList li {
+  padding: 0.25rem 0;
+}
+
+.inlineForm {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem;
+  min-width: 140px;
+}
+
+.select {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.participantList {
+  list-style: none;
+}
+
+.participantItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.participantItem:last-child {
+  border-bottom: none;
+}
+
+.participantDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.participantName {
+  flex: 1;
+  font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.expenseList {
+  list-style: none;
+}
+
+.expenseItem {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.expenseItem:last-child {
+  border-bottom: none;
+}
+
+.expenseMain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.expenseAmount {
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
+.expenseDesc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.expenseDate {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.expensePayer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.expenseSplits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.splitBadge {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--surface-hover);
+  border-radius: 6px;
+  color: var(--text-muted);
+}
+
+.expenseActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.empty {
+  color: var(--text-muted);
+  padding: 1rem 0;
+}

@@ -1,0 +1,111 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.loading {
+  color: var(--text-muted);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card,
+.cardGreen,
+.cardRed {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardGreen {
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.cardRed {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.cardLabel {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.cardValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.cardGreen .cardValue {
+  color: var(--green);
+}
+
+.cardRed .cardValue {
+  color: var(--red);
+}
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.empty {
+  color: var(--text-muted);
+}
+
+.groupList {
+  list-style: none;
+}
+
+.groupList li {
+  border-bottom: 1px solid var(--border);
+}
+
+.groupList li:last-child {
+  border-bottom: none;
+}
+
+.groupLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  color: var(--text);
+}
+
+.groupLink:hover {
+  color: var(--accent);
+}
+
+.groupName {
+  font-weight: 500;
+}
+
+.groupMeta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
