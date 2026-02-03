@@ -1,15 +1,15 @@
 :root {
-  --bg: #0c0d10;
-  --surface: #14161c;
-  --surface-hover: #1a1d26;
-  --border: #2a2d38;
-  --text: #e8eaef;
-  --text-muted: #8b8f9a;
-  --accent: #6366f1;
-  --accent-hover: #818cf8;
-  --green: #22c55e;
-  --red: #ef4444;
-  --amber: #f59e0b;
+  --bg: #f1f3f5;
+  --surface: #ffffff;
+  --surface-hover: #e9ecef;
+  --border: #dee2e6;
+  --text: #212529;
+  --text-muted: #495057;
+  --accent: #5c6bc0;
+  --accent-hover: #7986cb;
+  --green: #2e7d32;
+  --red: #c62828;
+  --amber: #ef6c00;
   --radius: 10px;
   --font-sans: 'DM Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
