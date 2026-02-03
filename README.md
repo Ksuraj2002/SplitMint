@@ -44,6 +44,7 @@ Full-stack MERN expense-splitting app (MongoDB, Express, React, Node.js).
    - `PORT=5000`
    - `MONGODB_URI=mongodb://localhost:27017/splitmint` (or your Atlas URI)
    - `JWT_SECRET=your-secret-key`
+   - (Optional) `CORS_ORIGIN` — for production, set to your frontend URL (e.g. `https://splitmint.vercel.app`)
 
 4. **Run**
    - **Both (recommended):** from project root:
@@ -70,14 +71,37 @@ splitmint/
 │   │   └── pages/
 │   └── package.json
 ├── server/          # Express backend
+│   ├── app.js       # Express app (used by server.js and Vercel api)
 │   ├── middleware/  # auth
 │   ├── models/      # User, Group, Participant, Expense
 │   ├── routes/      # auth, groups, expenses, balance
-│   ├── server.js
+│   ├── server.js    # local dev entry (listens on PORT)
 │   └── package.json
-├── package.json      # root scripts
+├── api/             # Vercel serverless: forwards /api/* to Express
+│   └── index.js
+├── vercel.json      # Vercel build & rewrites
+├── package.json     # root scripts
 └── README.md
 ```
+
+## Deploy on Vercel
+
+1. **Push the repo to GitHub** (if not already).
+
+2. **Import on Vercel**
+   - Go to [vercel.com/new](https://vercel.com/new), import your GitHub repo.
+   - **Framework Preset:** leave as *Other* or *Vite* (build is overridden by `vercel.json`).
+   - **Root Directory:** `.` (project root).
+   - **Build and Output:** `vercel.json` sets these; no need to change unless you prefer.
+
+3. **Environment variables** (Project → Settings → Environment Variables)
+   - `MONGODB_URI` — your MongoDB connection string (e.g. [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)).
+   - `JWT_SECRET` — a long random secret for JWT.
+   - `CORS_ORIGIN` — your Vercel app URL, e.g. `https://your-project.vercel.app` (so the API allows requests from the frontend).
+
+4. **Deploy**
+   - Deploy; Vercel will run `npm run install:all`, build the client, and deploy the API from `api/index.js`.
+   - Frontend and `/api/*` are on the same domain; the client’s `baseURL: '/api'` works without changes.
 
 ## API overview
 
